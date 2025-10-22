@@ -1,47 +1,53 @@
-body {
-  font-family: sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #f4f4f4;
-}
-
-.calculator {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  padding: 10px;
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-#display {
-  width: 100%;
-  height: 50px;
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  text-align: right;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-}
-
-button {
-  padding: 20px;
-  font-size: 1em;
-  border: none;
-  background: #e0e0e0;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-button:hover {
-  background: #d0d0d0;
-}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calculator</title>
+<style>
+  body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+  }
+  .calculator {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 320px;
+  }
+  #display {
+    width: 100%; height: 50px; font-size: 1.5em;
+    margin-bottom: 10px; text-align: right; padding: 10px; box-sizing: border-box;
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  button {
+    padding: 14px; font-size: 1em; border: none; background: #e0e0e0;
+    border-radius: 5px; cursor: pointer; transition: background .2s;
+  }
+  button:hover { background: #d0d0d0; }
+</style>
+</head>
+<body>
+  <div class="calculator">
+    <input id="display" type="text" readonly>
+    <div class="buttons">
+      <button>C</button><button>(</button><button>)</button><button>÷</button>
+      <button>7</button><button>8</button><button>9</button><button>×</button>
+      <button>4</button><button>5</button><button>6</button><button>−</button>
+      <button>1</button><button>2</button><button>3</button><button>+</button>
+      <button>0</button><button>.</button><button>=</button><button>^</button>
+      <button>sin</button><button>cos</button><button>tan</button><button>√</button>
+    </div>
+  </div>
+</body>
+</html>
